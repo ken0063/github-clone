@@ -1,17 +1,21 @@
+/* eslint-disable no-console */
+/* eslint-disable no-undef */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import { ApolloRequestClient } from './utils/ApolloRequestClient';
+import ScrollToTop from './utils/ScrollToTop';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <ApolloRequestClient>
+    <BrowserRouter>
+      <ScrollToTop />
+      <App />
+    </BrowserRouter>
+  </ApolloRequestClient>,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  document.getElementById('root'),
+);

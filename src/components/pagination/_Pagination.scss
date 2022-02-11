@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
+.pages {
+  margin: 65px 325px 0 auto;
+  width: 304px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    .arrows {
+      padding: 11.5px 16px;
+      border-radius: 10px;
+      background: #f3f3f3;
+
+      &:focus {
+        background: #000000;
+      }
+    }
+
+    li {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 29px;
+
+      text-transform: capitalize;
+      .buttons {
+        text-decoration: none;
+        color: #b0b7c3;
+
+        &:focus {
+          color: #000000;
+        }
+      }
+    }
+  }
+}

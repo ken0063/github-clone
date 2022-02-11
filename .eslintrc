@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["prettier", "react-hooks", "react"],
+  "rules": {
+    "no-undef": "error",
+    "no-useless-escape": "error",
+    "react/require-default-props": "off" ,
+    "array-callback-return": "error",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "no-console": "error",
+    "no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": true,
+        "quoteProps": "as-needed",
+        "jsxSingleQuote": false,
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "arrowParens": "avoid",
+        "endOfLine": "lf"
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint"
+}
